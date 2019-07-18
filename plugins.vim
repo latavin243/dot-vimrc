@@ -1,32 +1,28 @@
-set nocompatible               " be iMproved
-filetype off                   " required!
+call plug#begin('~/.vim/bundle')
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'easymotion/vim-easymotion'
+Plug 'mhinz/vim-startify'
+Plug 'scrooloose/nerdtree'
+Plug 'terryma/vim-multiple-cursors'
+Plug 'vim-airline/vim-airline'
 
-Bundle 'mhinz/vim-startify'
-Bundle 'scrooloose/nerdtree'
-Bundle 'ctrlpvim/ctrlp.vim'
-Bundle 'terryma/vim-multiple-cursors'
-Bundle 'vim-airline/vim-airline'
-Bundle 'easymotion/vim-easymotion'
-
-Bundle 'tpope/vim-surround'
-Bundle 'jiangmiao/auto-pairs'
-Bundle 'bling/vim-bufferline'
-Bundle 'tpope/vim-abolish'
-Bundle 'majutsushi/tagbar'
-Bundle 'bronson/vim-trailing-whitespace'
-Bundle 'mileszs/ack.vim'
+Plug 'bling/vim-bufferline'
+Plug 'bronson/vim-trailing-whitespace'
+Plug 'jiangmiao/auto-pairs'
+Plug 'majutsushi/tagbar'
+Plug 'mileszs/ack.vim'
+Plug 'tpope/vim-abolish'
+Plug 'tpope/vim-surround'
 
 " Auto Completion
-Bundle 'Shougo/neocomplcache'
+Plug 'Shougo/neocomplcache'
 
 " Golang
-Bundle 'fatih/vim-go'
+Plug 'fatih/vim-go'
 
 " Themes
-Bundle 'flazz/vim-colorschemes'
+Plug 'flazz/vim-colorschemes'
 
-filetype plugin indent on     " required!
+call plug#end()
 

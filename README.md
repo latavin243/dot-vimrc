@@ -3,11 +3,13 @@ Simple config file for Vim.
 
 ## Installation
 ```bash
-mv $HOME/.vim $HOME/.vim.orig
-mv $HOME/.vimrc $HOME/.vimrc.orig
-git clone https://github.com/GuoQi405/dot-vimrc.git $HOME/.vim
-ln -s $HOME/.vim/vimrc $HOME/.vimrc
-git clone https://github.com/gmarik/vundle.git $HOME/.vim/bundle/vundle
-vim +BundleInstall +q +q
-ln -s $HOME/.vim/bundle/vim-colorschemes/colors $HOME/.vim/colors
+mv ~/.vim ~/.vim.orig
+mv ~/.vimrc ~/.vimrc.orig
+git clone https://github.com/GuoQi405/dot-vimrc.git ~/.vim
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+ln -s ~/.vim/vimrc ~/.vimrc
+vim +PlugInstall +qa
+ln -s ~/.vim/bundle/vim-colorschemes/colors ~/.vim/colors
 ```
+
