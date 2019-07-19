@@ -117,3 +117,17 @@ let g:neocomplcache_omni_patterns.erlang = '[a-zA-Z]\|:'
 
 " vim-go
 let g:go_version_warning = 0
+let g:go_highlight_functions = 1
+let g:go_highlight_function_calls  =  1
+let g:go_highlight_methods = 1
+let g:go_highlight_structs = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_build_constraints = -1
+let g:go_highlight_types  =  1
+let g:go_highlight_fields  =  1
+let g:go_highlight_extra_types = 1
+let g:go_fmt_command = "goimports"
+let g:go_decls_includes = "func"
+let g:go_decls_includes = "func,type"
+let g:go_def_mode = 'godef'
+let g:go_info_mode = 'gocode'
