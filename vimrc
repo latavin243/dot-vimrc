@@ -5,6 +5,7 @@ colorscheme slate
 set background=dark
 
 " basic settings
+syntax enable
 syntax on
 set number
 set nocompatible
@@ -36,6 +37,9 @@ set smartcase
 
 set mouse=a
 set fileencodings=utf-8,gb2312,gb18030,gbk,ucs-bom,cp936,latin1
+
+" clipboard
+set clipboard=unnamedplus
 
 " autocmd
 autocmd VimEnter * set nospell
