@@ -53,7 +53,6 @@ autocmd VimEnter * set nospell
 " autocmd BufWritePost * call system("ctags -R")
 " }
 
-
 " key mappings {
 inoremap jj <ESC>
 nnoremap <silent> [b :bprevious<CR>
@@ -92,6 +91,11 @@ let NERDTreeChDirMode=2
 let NERDTreeIgnore=['\~$', '\.pyc$', '\.swp$']
 let NERDTreeShowBookmarks=1
 let NERDTreeWinPos = "left"
+let NERDTreeHidden=1
+" open nerdtree if no file specified
+autocmd vimenter * if !argc()|NERDTree|endif
+" close if nerdtree is the last window left
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 " }
 
 " ctrlp {
@@ -131,8 +135,6 @@ let g:neocomplcache_omni_patterns.erlang = '[a-zA-Z]\|:'
 " }
 " }
 
-" golang {
-
 " vim-go {
 let g:go_version_warning = 0
 let g:go_highlight_functions = 1
@@ -149,8 +151,6 @@ let g:go_decls_includes = "func"
 let g:go_decls_includes = "func,type"
 let g:go_def_mode = 'godef'
 let g:go_info_mode = 'gocode'
-" }
-
 " }
 
 " }
