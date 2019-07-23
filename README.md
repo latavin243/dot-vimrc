@@ -11,5 +11,19 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 ln -s ~/.vim/vimrc ~/.vimrc
 vim +PlugInstall +qa
 ln -s ~/.vim/bundle/vim-colorschemes/colors ~/.vim/colors
+echo "colorscheme gruvbox" >> ~/.vimrc.local
+```
+
+## Update
+
+### Update vim config
+```bash
+cd ~/.vim
+git pull --rebase
+```
+
+### Update plugins
+```bash
+vim +PlugUpdate +PlugClean +qa
 ```
 
