@@ -49,7 +49,7 @@ set smartcase
 " }
 
 " autocmd {
-autocmd VimEnter * set nospell
+autocmd vimenter * set nospell
 " autocmd BufWritePost * call system("ctags -R")
 " }
 
@@ -79,80 +79,6 @@ endfunction
 
 " json format {
 com! FormatJSON %!python3 -m json.tool
-" }
-
-" === plugin settings === {
-
-" nerdtree {
-map <C-e> :NERDTreeToggle<CR>
-let NERDChristmasTree=0
-let NERDTreeWinSize=30
-let NERDTreeChDirMode=2
-let NERDTreeIgnore=['\~$', '\.pyc$', '\.swp$']
-let NERDTreeShowBookmarks=1
-let NERDTreeWinPos = "left"
-let NERDTreeHidden=1
-" open nerdtree if no file specified
-autocmd vimenter * if !argc()|NERDTree|endif
-" close if nerdtree is the last window left
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-" }
-
-" ctrlp {
-set wildignore+=*/tmp/*,*.so,*.o,*.a,*.obj,*.swp,*.zip,*.pyc,*.pyo,*.class,.DS_Store  " MacOSX/Linux
-let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$'
-" }
-
-" easymotion {
-nmap ss <Plug>(easymotion-s2)
-" }
-
-" neocomplcache {
-let g:neocomplcache_enable_at_startup=1
-let g:neoComplcache_disableautocomplete=1
-"let g:neocomplcache_enable_underbar_completion = 1
-"let g:neocomplcache_enable_camel_case_completion = 1
-let g:neocomplcache_enable_smart_case=1
-let g:neocomplcache_min_syntax_length = 3
-let g:neocomplcache_lock_buffer_name_pattern = '\*ku\*'
-set completeopt-=preview
-
-imap <C-k> <Plug>(neocomplcache_snippets_force_expand)
-smap <C-k> <Plug>(neocomplcache_snippets_force_expand)
-imap <C-l> <Plug>(neocomplcache_snippets_force_jump)
-smap <C-l> <Plug>(neocomplcache_snippets_force_jump)
-
-" enable omni completion {
-autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
-autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
-autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
-autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
-autocmd FileType c setlocal omnifunc=ccomplete#Complete
-if !exists('g:neocomplcache_omni_patterns')
-    let g:neocomplcache_omni_patterns = {}
-endif
-let g:neocomplcache_omni_patterns.erlang = '[a-zA-Z]\|:'
-" }
-" }
-
-" vim-go {
-let g:go_version_warning = 0
-let g:go_highlight_functions = 1
-let g:go_highlight_function_calls  =  1
-let g:go_highlight_methods = 1
-let g:go_highlight_structs = 1
-let g:go_highlight_operators = 1
-let g:go_highlight_build_constraints = -1
-let g:go_highlight_types  =  1
-let g:go_highlight_fields  =  1
-let g:go_highlight_extra_types = 1
-let g:go_fmt_command = "goimports"
-let g:go_decls_includes = "func"
-let g:go_decls_includes = "func,type"
-let g:go_def_mode = 'godef'
-let g:go_info_mode = 'gocode'
-" }
-
 " }
 
 " use local vimrc if available {
