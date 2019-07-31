@@ -27,13 +27,15 @@ nmap ss <Plug>(easymotion-s2)
 " nerdtree {
 Plug 'scrooloose/nerdtree'
 map <C-e> :NERDTreeToggle<CR>
-let NERDChristmasTree=0
-let NERDTreeWinSize=30
-let NERDTreeChDirMode=2
-let NERDTreeIgnore=['\~$', '\.pyc$', '\.swp$']
-let NERDTreeShowBookmarks=1
-let NERDTreeWinPos = "left"
-let NERDTreeHidden=1
+let g:NERDChristmasTree=0
+let g:NERDTreeWinSize=30
+let g:NERDTreeChDirMode=2
+let g:NERDTreeIgnore=['\~$', '\.pyc$', '\.swp$']
+let g:NERDTreeShowBookmarks=1
+let g:NERDTreeWinPos = 'left'
+let g:NERDTreeHidden=1
+let g:NERDTreeDirArrowExpandable='+'
+let g:NERDTreeDirArrowCollapsible='-'
 " close if nerdtree is the last window left
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 " }
