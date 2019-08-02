@@ -67,4 +67,10 @@ Plug 'Shougo/neocomplcache'
 Plug 'flazz/vim-colorschemes'
 " }
 
+" use local bundle if available {
+if filereadable(expand("$HOME/.vimbundle.local"))
+    source $HOME/.vimbundle.local
+endif
+" }
+
 call plug#end()

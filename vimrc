@@ -1,9 +1,5 @@
 " vim: set sw=4 ts=4 sts=4 et tw=78 foldmarker={,} foldlevel=0 foldmethod=marker spell:
 
-" source plugin file {
-source $HOME/.vim/plugins.vim
-" }
-
 " theme {
 colorscheme slate
 set background=dark
@@ -24,7 +20,7 @@ set number
 set showcmd
 set title
 
-let mapleader=","
+let mapleader=" "
 " }
 
 " match bracket {
@@ -87,8 +83,6 @@ if filereadable(expand("$HOME/.vimrc.local"))
 endif
 " }
 
-" use local bundle if available {
-if filereadable(expand("$HOME/.vimbundle.local"))
-    source $HOME/.vimbundle.local
-endif
+" source plugin file {
+source $HOME/.vim/plugins.vim
 " }
