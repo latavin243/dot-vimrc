@@ -14,6 +14,8 @@ Plug 'tpope/vim-abolish'
 Plug 'tpope/vim-surround'
 Plug 'vim-airline/vim-airline'
 
+Plug 'chiel92/vim-autoformat'
+
 " ctrlsf {{
 Plug 'dyng/ctrlsf.vim'
 noremap <c-f> :CtrlSF<space>
@@ -61,6 +63,18 @@ let g:Lf_PreviewResult = {'Function':0, 'BufTag':0}
 
 " neocomplcache {
 Plug 'Shougo/neocomplcache'
+" }
+
+" ale: linting {
+Plug 'w0rp/ale'
+let g:ale_linters_explicit = 1
+let g:ale_completion_delay = 500
+let g:ale_echo_delay = 20
+let g:ale_lint_delay = 500
+let g:ale_echo_msg_format = '[%linter%] %code: %%s'
+let g:ale_lint_on_text_changed = 'normal'
+let g:ale_lint_on_insert_leave = 1
+let g:airline#extensions#ale#enabled = 1
 " }
 
 " colorschemes {
