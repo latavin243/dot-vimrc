@@ -9,7 +9,7 @@ Install **curl**, **git** and **vim**.
 ## Installation
 
 ```bash
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/GuoQi405/dot-vimrc/master/install.sh)"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/latavin243/dot-vimrc/master/install.sh)"
 ```
 
 ### Use custom colorscheme
