@@ -87,4 +87,8 @@ if filereadable(expand("$HOME/.vimbundle.local"))
 endif
 " }
 
+" tmux navigator {
+Plug 'christoomey/vim-tmux-navigator'
+" }
+
 call plug#end()
