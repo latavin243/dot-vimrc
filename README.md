@@ -1,6 +1,15 @@
 # dot-vimrc
 Simple config file for Vim.
 
+## Features
+
+0. Support mouse click
+1. `<Ctrl-e>` to open file explorer
+2. `<Ctrl-p>` to search and jump to file
+3. `<Ctrl-f>` to search content (non-interactive)
+4. `ss` in normal mode, easy-motion
+5. A little bit auto-completion
+
 ## Prerequisite
 
 Install **curl**, **git** and **vim**.
@@ -30,12 +39,3 @@ git pull --rebase
 ```bash
 vim +PlugUpdate +PlugClean +qa
 ```
-
-## Features
-
-0. Support mouse click
-1. `<Ctrl-e>` to open file explorer
-2. `<Ctrl-p>` to search and jump to file
-3. `<Ctrl-f>` to search content (non-interactive)
-4. `ss` in normal mode, easy-motion
-5. A little bit auto-completion
