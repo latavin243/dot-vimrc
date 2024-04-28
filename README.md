@@ -17,6 +17,8 @@ Install **curl**, **git** and **vim**.
 
 ## Installation
 
+This will back up your original vim config, `~/.vim` -> `~/.vim.orig`, `~/.vimrc` -> `~/.vimrc.orig`
+
 ```bash
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/latavin243/dot-vimrc/master/install.sh)"
 ```
@@ -31,8 +33,7 @@ echo "colorscheme molokai" >> ~/.vimrc.local
 
 ### Update vim config
 ```bash
-cd ~/.vim
-git pull --rebase
+cd ~/.vim; git pull --rebase
 ```
 
 ### Update plugins
